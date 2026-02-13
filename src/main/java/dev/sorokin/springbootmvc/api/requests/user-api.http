@@ -1,0 +1,27 @@
+### Добавление нового пользователя
+POST {{baseUrl}}/user/add
+Content-Type: application/json
+
+{
+  "name": "Ivan",
+  "email": "ivan@gmail.com",
+  "age": 30
+}
+
+### Изменение пользователя
+PUT {{baseUrl}}/user/update/1
+Content-Type: application/json
+
+{
+  "name": "Ivan2",
+  "email": "ivan2@gmail.com",
+  "age": 30
+}
+
+### Получение пользователя по ID
+GET {{baseUrl}}/user/get/1
+Accept: application/json
+
+### Удаление пользователя по ID
+DELETE {{baseUrl}}/user/delete/1
+Accept: application/json
