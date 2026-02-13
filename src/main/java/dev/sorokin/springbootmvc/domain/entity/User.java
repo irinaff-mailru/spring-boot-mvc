@@ -6,8 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @Builder
 @NoArgsConstructor
@@ -19,5 +19,5 @@ public class User {
     private String name;
     private String email;
     private Integer age;
-    private List<Pet> pets = new ArrayList<>();
+    private List<Pet> pets = new CopyOnWriteArrayList<>();
 }

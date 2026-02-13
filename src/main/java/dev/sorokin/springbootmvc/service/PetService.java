@@ -1,28 +1,28 @@
 package dev.sorokin.springbootmvc.service;
 
 import dev.sorokin.springbootmvc.api.dto.RequestPetDto;
-import dev.sorokin.springbootmvc.domain.entity.Pet;
+import dev.sorokin.springbootmvc.api.dto.ResponsePetDto;
 import jakarta.validation.constraints.NotNull;
 
 public interface PetService {
 
     /**
-     * Создание пользователя
+     * Создание питомца
      */
-    Pet addPet(RequestPetDto dto);
+    ResponsePetDto addPet(@NotNull RequestPetDto dto);
 
     /**
-     * Обновление пользователя
+     * Обновление питомца
      */
-    Pet updatePet(RequestPetDto dto);
+    ResponsePetDto updatePet(@NotNull Long id, @NotNull Long ownerId);
 
     /**
-     * Удаление пользователя
+     * Удаление питомца
      */
     void deletePet(@NotNull Long id);
 
     /**
-     * Получение пользователя
+     * Получение питомца
      */
-    Pet getPetr(@NotNull Long id);
+    ResponsePetDto getPet(@NotNull Long id);
 }

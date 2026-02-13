@@ -5,6 +5,7 @@ import dev.sorokin.springbootmvc.api.dto.ResponsePetDto;
 import dev.sorokin.springbootmvc.domain.entity.Pet;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;
+import org.mapstruct.MappingTarget;
 
 import java.util.List;
 
@@ -18,4 +19,6 @@ public interface PetMapper {
     List<ResponsePetDto> toWeb(List<Pet> source);
 
     ResponsePetDto toWeb(Pet source);
+
+    void update(@MappingTarget Pet target, RequestPetDto source );
 }

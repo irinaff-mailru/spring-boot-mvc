@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.springframework.boot") version "4.0.2"
+    id("org.springframework.boot") version "3.4.2"
     id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -38,6 +38,9 @@ dependencies {
     // --- ВАЖНО: СВЯЗКА LOMBOK + MAPSTRUCT ---
     // Эта зависимость гарантирует, что MapStruct увидит поля, сгенерированные Lombok
     annotationProcessor("org.projectlombok:lombok-mapstruct-binding:0.2.0")
+
+    // Swagger UI (SpringDoc)
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.5")
 
     // Он содержит JUnit, Mockito, AssertJ и поддержку @SpringBootTest + @AutoConfigureMockMvc
     testImplementation("org.springframework.boot:spring-boot-starter-test")
